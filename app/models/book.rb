@@ -16,4 +16,8 @@ class Book < ApplicationRecord
   content_type: { content_type: "application/pdf" },
   message: 'Only PDF allowed'
 
+  validates_numericality_of :price,
+  greater_than: 49, message: "Price must be at least 50 cents"
+
+
 end
